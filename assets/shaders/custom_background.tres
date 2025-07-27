@@ -1,0 +1,30 @@
+[gd_resource type="VisualShader" load_steps=2 format=3 uid="uid://p6jox6j1x6s1"]
+
+[sub_resource type="VisualShaderNodeColorParameter" id="VisualShaderNodeColorParameter_41cbq"]
+parameter_name = "custom_background_color"
+qualifier = 1
+
+[resource]
+code = "shader_type canvas_item;
+render_mode blend_mix;
+
+global uniform vec4 custom_background_color : source_color;
+
+
+
+void fragment() {
+// ColorParameter:2
+	vec4 n_out2p0 = custom_background_color;
+
+
+// Output:0
+	COLOR.rgb = vec3(n_out2p0.xyz);
+
+
+}
+"
+mode = 1
+flags/light_only = false
+nodes/fragment/2/node = SubResource("VisualShaderNodeColorParameter_41cbq")
+nodes/fragment/2/position = Vector2(60, 160)
+nodes/fragment/connections = PackedInt32Array(2, 0, 0, 0)

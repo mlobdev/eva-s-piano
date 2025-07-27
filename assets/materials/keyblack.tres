@@ -1,0 +1,6 @@
+[gd_resource type="ShaderMaterial" load_steps=2 format=3 uid="uid://1eeat8ros0ok"]
+
+[ext_resource type="Shader" uid="uid://decrytbxgppgc" path="res://assets/shaders/keyblack.tres" id="1_hl8ku"]
+
+[resource]
+shader = ExtResource("1_hl8ku")

@@ -1,0 +1,1120 @@
+[gd_scene load_steps=65 format=3 uid="uid://et0s1p7xhle5"]
+
+[ext_resource type="PackedScene" uid="uid://dkxorcrakldqb" path="res://assets/scenes/globals/Fondo.tscn" id="1_2i6s1"]
+[ext_resource type="Shader" uid="uid://384iis24t8i5" path="res://assets/shaders/phone.tres" id="2_1b254"]
+[ext_resource type="Texture2D" uid="uid://rco6hu8jw2l5" path="res://assets/images/buttons/palette.png" id="2_evqq8"]
+[ext_resource type="Texture2D" uid="uid://dvrcvd33yg620" path="res://assets/images/config/phone.png" id="2_lhqjn"]
+[ext_resource type="Script" uid="uid://dxebxnhyxqohm" path="res://assets/scenes/config/draggables-scripts/trash_can.gd" id="3_631wu"]
+[ext_resource type="Material" uid="uid://cq6h75srtfqtr" path="res://assets/materials/leftButton.tres" id="4_akqdo"]
+[ext_resource type="Texture2D" uid="uid://bans6txan2klt" path="res://assets/images/buttons/back.png" id="4_j48ka"]
+[ext_resource type="Texture2D" uid="uid://1hp4jifqnxry" path="res://assets/images/keyboard/white_key.png" id="4_oxi7j"]
+[ext_resource type="Texture2D" uid="uid://cyem7diyvhnbh" path="res://assets/images/buttons/changer.png" id="4_peh1p"]
+[ext_resource type="Script" uid="uid://d4cwlmrrhl6ie" path="res://assets/scenes/config/draggables-scripts/cde.gd" id="4_qsnf5"]
+[ext_resource type="Script" uid="uid://blyo7ej7qrmf0" path="res://assets/scenes/config/buttons-scripts/back_button.gd" id="5_ehslr"]
+[ext_resource type="Texture2D" uid="uid://dlqt46ptqom3f" path="res://assets/images/keyboard/black_key.png" id="5_qsnf5"]
+[ext_resource type="Texture2D" uid="uid://bic1roiepx036" path="res://assets/images/buttons/custompalette.png" id="6_0e5vg"]
+[ext_resource type="Texture2D" uid="uid://bdttryipq03em" path="res://assets/images/buttons/trashcan.png" id="6_twbqi"]
+[ext_resource type="Script" uid="uid://0p4bewd16l3t" path="res://assets/scenes/config/draggables-scripts/fgab.gd" id="7_kh251"]
+[ext_resource type="Script" uid="uid://dy2udc8gfdspx" path="res://assets/scenes/config/draggables-scripts/type_observer.gd" id="8_80eaw"]
+[ext_resource type="Script" uid="uid://dijlaklk2e4tn" path="res://assets/scenes/config/draggables-scripts/piano_liberator.gd" id="8_a6ljc"]
+[ext_resource type="Script" uid="uid://wyqouin3vuac" path="res://assets/scenes/config/draggables-scripts/type_starter.gd" id="8_bqf8p"]
+[ext_resource type="Script" uid="uid://crcaxipvq1kao" path="res://assets/scenes/config/buttons-scripts/trash_can_button.gd" id="8_x13av"]
+[ext_resource type="Texture2D" uid="uid://o4tb8r5jqvbj" path="res://assets/images/config/line.png" id="9_7yve1"]
+[ext_resource type="Shader" uid="uid://b07ot6oiuv426" path="res://assets/shaders/line.tres" id="9_g04dd"]
+[ext_resource type="Script" uid="uid://yus2dgdcodqe" path="res://assets/scenes/config/buttons-scripts/custom_palette_button.gd" id="9_n54l2"]
+[ext_resource type="Script" uid="uid://d2mp2ofra4ley" path="res://assets/scenes/config/draggables-scripts/piano_box.gd" id="9_uubmn"]
+[ext_resource type="Script" uid="uid://df3abt26gy3f1" path="res://assets/scenes/config/buttons-scripts/palette_button.gd" id="10_0qd6c"]
+[ext_resource type="Shader" uid="uid://dneokfkr4m778" path="res://assets/shaders/paletteButton.tres" id="10_1b254"]
+[ext_resource type="Script" uid="uid://v0kk0elfgfvw" path="res://assets/scenes/config/draggables-scripts/gpm.gd" id="10_clqq7"]
+[ext_resource type="Script" uid="uid://bsg07tk8fwfds" path="res://assets/scenes/config/draggables-scripts/octave_box.gd" id="13_kdj3k"]
+[ext_resource type="Script" uid="uid://d2up13mdxarc7" path="res://assets/scenes/config/draggables-scripts/octave_boxes_creator.gd" id="13_vgx1v"]
+[ext_resource type="Script" uid="uid://sckqc3nulnea" path="res://assets/scenes/config/draggables-scripts/vanish_effect.gd" id="13_vj2ob"]
+[ext_resource type="Script" uid="uid://b5wc88vbbjenf" path="res://assets/scenes/config/draggables-scripts/type_boxes_creator.gd" id="14_ehslr"]
+[ext_resource type="Script" uid="uid://dw55e06hk0tnv" path="res://assets/scenes/config/buttons-scripts/octave_starter_setter.gd" id="14_p0mjq"]
+[ext_resource type="Script" uid="uid://b5v08stc474fk" path="res://assets/scenes/config/draggables-scripts/octave_observer.gd" id="15_46k0i"]
+[ext_resource type="Script" uid="uid://ggj37gcam426" path="res://assets/scenes/config/draggables-scripts/instrument_box.gd" id="17_nwpjc"]
+[ext_resource type="Script" uid="uid://ky8kn5gea2u4" path="res://assets/scenes/config/draggables-scripts/instrument_boxes_creator.gd" id="18_vde7c"]
+[ext_resource type="Script" uid="uid://c5f1w5kmadjni" path="res://assets/scenes/config/draggables-scripts/instrument_observer.gd" id="20_i8jg1"]
+[ext_resource type="Material" uid="uid://qkdi2oeq20ly" path="res://assets/materials/num.tres" id="20_mdq5s"]
+[ext_resource type="Script" uid="uid://cy03lab8urhsu" path="res://assets/scenes/config/draggables-scripts/instrument_starter_setter.gd" id="21_d223m"]
+[ext_resource type="Script" uid="uid://l2yvfsaok2tr" path="res://assets/scenes/config/buttons-scripts/changer_listener.gd" id="22_7bpf7"]
+[ext_resource type="Script" uid="uid://cwtvgh0rb5kmv" path="res://assets/scenes/config/buttons-scripts/swapper_effect.gd" id="23_1i3l7"]
+[ext_resource type="Script" uid="uid://g16omp13y0a2" path="res://assets/scenes/config/draggables-scripts/nums_draggables.gd" id="23_bqsas"]
+[ext_resource type="Texture2D" uid="uid://cprjdtmbpklf6" path="res://assets/images/config/piano.png" id="26_f8c1p"]
+[ext_resource type="Script" uid="uid://cfy3b1beu6dto" path="res://assets/scenes/config/draggables-scripts/InsDraggable.gd" id="27_0t2sb"]
+[ext_resource type="Texture2D" uid="uid://c0am711ppwk1f" path="res://assets/images/config/organ.png" id="27_f26l3"]
+[ext_resource type="Texture2D" uid="uid://0g8oyvsu2m4f" path="res://assets/images/config/square.png" id="28_imkbe"]
+[ext_resource type="Texture2D" uid="uid://cngqsxmetv5lh" path="res://assets/images/config/triangle.png" id="29_imkbe"]
+[ext_resource type="Material" uid="uid://dplcc34575mtp" path="res://assets/materials/keywhite.tres" id="32_oouey"]
+[ext_resource type="Material" uid="uid://1eeat8ros0ok" path="res://assets/materials/keyblack.tres" id="34_oouey"]
+[ext_resource type="Material" uid="uid://ro8i34comcbv" path="res://assets/materials/instrument.tres" id="42_wmpjh"]
+[ext_resource type="Shader" uid="uid://siatmeoutgf6" path="res://assets/shaders/changer.tres" id="46_huhkv"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_wmpjh"]
+shader = ExtResource("2_1b254")
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_huhkv"]
+shader = ExtResource("10_1b254")
+shader_parameter/main_color = Color(0.92549, 0.729412, 0.960784, 1)
+shader_parameter/highlight_color = Color(0.262745, 0.109804, 0.294118, 1)
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_n54l2"]
+shader = ExtResource("10_1b254")
+shader_parameter/main_color = Color(0.592157, 0.784314, 0.858824, 1)
+shader_parameter/highlight_color = Color(0.211765, 0.192157, 0.176471, 1)
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_ja5a1"]
+shader = ExtResource("10_1b254")
+shader_parameter/main_color = Color(0.858824, 0.85098, 0.419608, 1)
+shader_parameter/highlight_color = Color(0.290196, 0.286275, 0.211765, 1)
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_5ct1a"]
+shader = ExtResource("10_1b254")
+shader_parameter/main_color = Color(0.304, 0.713133, 0.95, 1)
+shader_parameter/highlight_color = Color(0.1599, 0.314128, 0.41, 1)
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_mhepp"]
+shader = ExtResource("10_1b254")
+shader_parameter/main_color = Color(0.980392, 0.454902, 0.270588, 1)
+shader_parameter/highlight_color = Color(0.160784, 0.160784, 0.160784, 1)
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_imcl1"]
+shader = ExtResource("10_1b254")
+shader_parameter/main_color = Color(1, 0.619608, 0.847059, 1)
+shader_parameter/highlight_color = Color(0.356863, 0.219608, 0.301961, 1)
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_c8w6b"]
+shader = ExtResource("10_1b254")
+shader_parameter/main_color = Color(0.0745098, 1, 0.545098, 1)
+shader_parameter/highlight_color = Color(0.223529, 0.286275, 0.254902, 1)
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_hmcuc"]
+shader = ExtResource("10_1b254")
+shader_parameter/main_color = Color(0.635294, 0.635294, 0.635294, 1)
+shader_parameter/highlight_color = Color(0.118581, 0.118581, 0.118581, 1)
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_3sbmt"]
+shader = ExtResource("10_1b254")
+shader_parameter/main_color = Color(1, 1, 1, 1)
+shader_parameter/highlight_color = Color(0, 0, 0, 1)
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_uubmn"]
+shader = ExtResource("9_g04dd")
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_ss6mf"]
+shader = ExtResource("46_huhkv")
+
+[sub_resource type="Animation" id="Animation_uhb7a"]
+length = 0.001
+tracks/0/type = "bezier"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("CanvasLayer/FooterMenu/HorizontalChangers:theme_override_constants/separation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(760, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+
+[sub_resource type="Animation" id="Animation_a6ljc"]
+resource_name = "buttons_animations"
+length = 4.0
+loop_mode = 2
+tracks/0/type = "bezier"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("CanvasLayer/FooterMenu/HorizontalChangers:theme_override_constants/separation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"handle_modes": PackedInt32Array(2, 2),
+"points": PackedFloat32Array(760, -0.25, 0, 1, 0, 900, -1, 0, 0, 0),
+"times": PackedFloat32Array(0, 4)
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_uhb7a"]
+_data = {
+&"RESET": SubResource("Animation_uhb7a"),
+&"buttons_animations": SubResource("Animation_a6ljc")
+}
+
+[node name="Config" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="Background" parent="CanvasLayer" instance=ExtResource("1_2i6s1")]
+
+[node name="Phone" type="TextureRect" parent="CanvasLayer"]
+material = SubResource("ShaderMaterial_wmpjh")
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = -1400.0
+offset_top = -487.0
+offset_right = -117.0
+offset_bottom = 166.0
+grow_horizontal = 0
+grow_vertical = 2
+pivot_offset = Vector2(641.5, 326.5)
+size_flags_horizontal = 4
+texture = ExtResource("2_lhqjn")
+
+[node name="TrashCan" type="Control" parent="CanvasLayer"]
+z_index = 1
+layout_mode = 3
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -1170.0
+offset_top = -540.0
+offset_right = 1170.0
+offset_bottom = 540.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("3_631wu")
+
+[node name="LeftButtons" type="VBoxContainer" parent="CanvasLayer"]
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_left = 131.0
+offset_top = -421.0
+offset_right = 171.0
+offset_bottom = 59.0
+grow_vertical = 2
+theme_override_constants/separation = 240
+
+[node name="BackContainer" type="Control" parent="CanvasLayer/LeftButtons"]
+layout_mode = 2
+
+[node name="BackButton" type="TextureButton" parent="CanvasLayer/LeftButtons/BackContainer"]
+material = ExtResource("4_akqdo")
+layout_mode = 1
+offset_left = -200.0
+offset_top = -200.0
+offset_right = 200.0
+offset_bottom = 200.0
+scale = Vector2(0.3, 0.3)
+pivot_offset = Vector2(200, 200)
+texture_normal = ExtResource("4_j48ka")
+script = ExtResource("5_ehslr")
+
+[node name="PaletteContainer1" type="Control" parent="CanvasLayer/LeftButtons"]
+layout_mode = 2
+
+[node name="CustomPaletteButton" type="TextureButton" parent="CanvasLayer/LeftButtons/PaletteContainer1"]
+material = ExtResource("4_akqdo")
+layout_mode = 1
+offset_left = -200.0
+offset_top = -200.0
+offset_right = 200.0
+offset_bottom = 200.0
+scale = Vector2(0.3, 0.3)
+pivot_offset = Vector2(200, 200)
+texture_normal = ExtResource("6_0e5vg")
+script = ExtResource("9_n54l2")
+metadata/_edit_use_anchors_ = true
+
+[node name="PaletteContainer2" type="Control" parent="CanvasLayer/LeftButtons"]
+layout_mode = 2
+
+[node name="TrashCanButton" type="TextureButton" parent="CanvasLayer/LeftButtons/PaletteContainer2"]
+material = ExtResource("4_akqdo")
+layout_mode = 1
+offset_left = -200.0
+offset_top = -200.0
+offset_right = 200.0
+offset_bottom = 200.0
+scale = Vector2(0.3, 0.3)
+pivot_offset = Vector2(200, 200)
+texture_normal = ExtResource("6_twbqi")
+script = ExtResource("8_x13av")
+
+[node name="Palettes" type="GridContainer" parent="CanvasLayer"]
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_left = 353.0
+offset_top = -421.0
+offset_right = 763.0
+offset_bottom = 59.0
+grow_vertical = 2
+pivot_offset = Vector2(156.38, 0)
+size_flags_horizontal = 0
+theme_override_constants/h_separation = 205
+theme_override_constants/v_separation = 240
+columns = 3
+
+[node name="PaletteContainer0" type="Control" parent="CanvasLayer/Palettes"]
+layout_mode = 2
+
+[node name="PaletteButton" type="TextureButton" parent="CanvasLayer/Palettes/PaletteContainer0"]
+material = SubResource("ShaderMaterial_huhkv")
+layout_mode = 1
+offset_left = -200.0
+offset_top = -200.0
+offset_right = 357.0
+offset_bottom = 357.0
+scale = Vector2(0.3, 0.3)
+pivot_offset = Vector2(200, 200)
+texture_normal = ExtResource("2_evqq8")
+script = ExtResource("10_0qd6c")
+palette_name = "Unicorn"
+main_color = Color(0.92549, 0.729412, 0.960784, 1)
+accent_color = Color(0.894118, 0.517647, 0.960784, 1)
+background_color = Color(0.494867, 0.3692, 0.52, 1)
+shadow_color = Color(0.74228, 0.5852, 0.77, 1)
+highlight_color = Color(0.262745, 0.109804, 0.294118, 1)
+
+[node name="PaletteContainer1" type="Control" parent="CanvasLayer/Palettes"]
+layout_mode = 2
+
+[node name="PaletteButton" type="TextureButton" parent="CanvasLayer/Palettes/PaletteContainer1"]
+material = SubResource("ShaderMaterial_n54l2")
+layout_mode = 1
+offset_left = -200.0
+offset_top = -200.0
+offset_right = 357.0
+offset_bottom = 357.0
+scale = Vector2(0.3, 0.3)
+pivot_offset = Vector2(200, 200)
+texture_normal = ExtResource("2_evqq8")
+script = ExtResource("10_0qd6c")
+palette_name = "Swamp"
+main_color = Color(0.592157, 0.784314, 0.858824, 1)
+accent_color = Color(0.862745, 0.847059, 0.592157, 1)
+background_color = Color(0.32549, 0.423529, 0.458824, 1)
+shadow_color = Color(0.556863, 0.52549, 0.611765, 1)
+highlight_color = Color(0.211765, 0.192157, 0.176471, 1)
+metadata/_custom_type_script = "uid://df3abt26gy3f1"
+metadata/_edit_use_anchors_ = true
+
+[node name="PaletteContainer2" type="Control" parent="CanvasLayer/Palettes"]
+layout_mode = 2
+
+[node name="PaletteButton" type="TextureButton" parent="CanvasLayer/Palettes/PaletteContainer2"]
+material = SubResource("ShaderMaterial_ja5a1")
+layout_mode = 1
+offset_left = -200.0
+offset_top = -200.0
+offset_right = 357.0
+offset_bottom = 357.0
+scale = Vector2(0.3, 0.3)
+pivot_offset = Vector2(200, 200)
+texture_normal = ExtResource("2_evqq8")
+script = ExtResource("10_0qd6c")
+palette_name = "Desert"
+main_color = Color(0.858824, 0.85098, 0.419608, 1)
+accent_color = Color(0.717647, 0.713726, 0.454902, 1)
+background_color = Color(0.45, 0.45, 0.351, 1)
+shadow_color = Color(0.572549, 0.572549, 0.447059, 1)
+highlight_color = Color(0.290196, 0.286275, 0.211765, 1)
+metadata/_custom_type_script = "uid://df3abt26gy3f1"
+metadata/_edit_use_anchors_ = true
+
+[node name="PaletteContainer3" type="Control" parent="CanvasLayer/Palettes"]
+layout_mode = 2
+
+[node name="PaletteButton" type="TextureButton" parent="CanvasLayer/Palettes/PaletteContainer3"]
+material = SubResource("ShaderMaterial_5ct1a")
+layout_mode = 1
+offset_left = -200.0
+offset_top = -200.0
+offset_right = 357.0
+offset_bottom = 357.0
+scale = Vector2(0.3, 0.3)
+pivot_offset = Vector2(200, 200)
+texture_normal = ExtResource("2_evqq8")
+script = ExtResource("10_0qd6c")
+palette_name = "Sea"
+main_color = Color(0.304, 0.713133, 0.95, 1)
+accent_color = Color(0.1079, 0.793895, 0.83, 1)
+background_color = Color(0.27451, 0.831373, 0.858824, 1)
+shadow_color = Color(0.598, 0.801933, 0.92, 1)
+highlight_color = Color(0.1599, 0.314128, 0.41, 1)
+metadata/_custom_type_script = "uid://df3abt26gy3f1"
+metadata/_edit_use_anchors_ = true
+
+[node name="PaletteContainer4" type="Control" parent="CanvasLayer/Palettes"]
+layout_mode = 2
+
+[node name="PaletteButton" type="TextureButton" parent="CanvasLayer/Palettes/PaletteContainer4"]
+material = SubResource("ShaderMaterial_mhepp")
+layout_mode = 1
+offset_left = -200.0
+offset_top = -200.0
+offset_right = 357.0
+offset_bottom = 357.0
+scale = Vector2(0.3, 0.3)
+pivot_offset = Vector2(200, 200)
+texture_normal = ExtResource("2_evqq8")
+script = ExtResource("10_0qd6c")
+palette_name = "Volcano"
+main_color = Color(0.980392, 0.454902, 0.270588, 1)
+accent_color = Color(0.988235, 0.72549, 0.188235, 1)
+background_color = Color(0.75, 0.2555, 0.105, 1)
+shadow_color = Color(0.85, 0.289567, 0.119, 1)
+highlight_color = Color(0.160784, 0.160784, 0.160784, 1)
+metadata/_custom_type_script = "uid://df3abt26gy3f1"
+metadata/_edit_use_anchors_ = true
+
+[node name="PaletteContainer5" type="Control" parent="CanvasLayer/Palettes"]
+layout_mode = 2
+
+[node name="PaletteButton" type="TextureButton" parent="CanvasLayer/Palettes/PaletteContainer5"]
+material = SubResource("ShaderMaterial_imcl1")
+layout_mode = 1
+offset_left = -200.0
+offset_top = -200.0
+offset_right = 357.0
+offset_bottom = 357.0
+scale = Vector2(0.3, 0.3)
+pivot_offset = Vector2(200, 200)
+texture_normal = ExtResource("2_evqq8")
+script = ExtResource("10_0qd6c")
+palette_name = "Princess"
+main_color = Color(1, 0.619608, 0.847059, 1)
+accent_color = Color(0.93, 0.3162, 0.68448, 1)
+background_color = Color(0.572549, 0.427451, 0.513726, 1)
+shadow_color = Color(0.66, 0.462, 0.5808, 1)
+highlight_color = Color(0.356863, 0.219608, 0.301961, 1)
+metadata/_custom_type_script = "uid://df3abt26gy3f1"
+metadata/_edit_use_anchors_ = true
+
+[node name="PaletteContainer6" type="Control" parent="CanvasLayer/Palettes"]
+layout_mode = 2
+
+[node name="PaletteButton" type="TextureButton" parent="CanvasLayer/Palettes/PaletteContainer6"]
+material = SubResource("ShaderMaterial_c8w6b")
+layout_mode = 1
+offset_left = -200.0
+offset_top = -200.0
+offset_right = 357.0
+offset_bottom = 357.0
+scale = Vector2(0.3, 0.3)
+pivot_offset = Vector2(200, 200)
+texture_normal = ExtResource("2_evqq8")
+script = ExtResource("10_0qd6c")
+palette_name = "Forest"
+main_color = Color(0.0745098, 1, 0.545098, 1)
+accent_color = Color(0.184314, 0.858824, 0.529412, 1)
+background_color = Color(0.254902, 0.713726, 0.490196, 1)
+shadow_color = Color(0.2088, 0.58, 0.400587, 1)
+highlight_color = Color(0.223529, 0.286275, 0.254902, 1)
+metadata/_custom_type_script = "uid://df3abt26gy3f1"
+metadata/_edit_use_anchors_ = true
+
+[node name="PaletteContainer7" type="Control" parent="CanvasLayer/Palettes"]
+layout_mode = 2
+
+[node name="PaletteButton" type="TextureButton" parent="CanvasLayer/Palettes/PaletteContainer7"]
+material = SubResource("ShaderMaterial_hmcuc")
+layout_mode = 1
+offset_left = -200.0
+offset_top = -200.0
+offset_right = 357.0
+offset_bottom = 357.0
+scale = Vector2(0.3, 0.3)
+pivot_offset = Vector2(200, 200)
+texture_normal = ExtResource("2_evqq8")
+script = ExtResource("10_0qd6c")
+palette_name = "Dark Tree"
+main_color = Color(0.635294, 0.635294, 0.635294, 1)
+accent_color = Color(0.501961, 0.501961, 0.501961, 1)
+background_color = Color(0.231373, 0.231373, 0.231373, 1)
+shadow_color = Color(0.368627, 0.368627, 0.368627, 1)
+highlight_color = Color(0.118581, 0.118581, 0.118581, 1)
+metadata/_custom_type_script = "uid://df3abt26gy3f1"
+metadata/_edit_use_anchors_ = true
+
+[node name="PaletteContainer8" type="Control" parent="CanvasLayer/Palettes"]
+layout_mode = 2
+
+[node name="PaletteButton" type="TextureButton" parent="CanvasLayer/Palettes/PaletteContainer8"]
+material = SubResource("ShaderMaterial_3sbmt")
+layout_mode = 1
+offset_left = -200.0
+offset_top = -200.0
+offset_right = 357.0
+offset_bottom = 357.0
+scale = Vector2(0.3, 0.3)
+pivot_offset = Vector2(200, 200)
+texture_normal = ExtResource("2_evqq8")
+script = ExtResource("10_0qd6c")
+palette_name = "GrayScale"
+metadata/_custom_type_script = "uid://df3abt26gy3f1"
+metadata/_edit_use_anchors_ = true
+
+[node name="Boxes" type="Control" parent="CanvasLayer"]
+layout_mode = 3
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = -2340.0
+offset_top = -540.0
+offset_right = -2340.0
+offset_bottom = -540.0
+grow_horizontal = 0
+grow_vertical = 2
+size_flags_horizontal = 8
+
+[node name="TypeBoxes" type="Control" parent="CanvasLayer/Boxes"]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="TypeBoxesContainer" type="GridContainer" parent="CanvasLayer/Boxes/TypeBoxes"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 1153.0
+offset_top = 179.0
+offset_right = 1793.0
+offset_bottom = 630.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_constants/h_separation = 320
+theme_override_constants/v_separation = 180
+columns = 3
+
+[node name="TypeBoxContainer0" type="Control" parent="CanvasLayer/Boxes/TypeBoxes/TypeBoxesContainer"]
+layout_mode = 2
+
+[node name="TypeBox" type="Control" parent="CanvasLayer/Boxes/TypeBoxes/TypeBoxesContainer/TypeBoxContainer0"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -157.5
+offset_top = -74.0
+offset_right = 157.5
+offset_bottom = 74.0
+grow_horizontal = 2
+grow_vertical = 2
+pivot_offset = Vector2(164, 75)
+script = ExtResource("9_uubmn")
+
+[node name="Line2D" type="Line2D" parent="CanvasLayer/Boxes/TypeBoxes/TypeBoxesContainer/TypeBoxContainer0/TypeBox"]
+texture_repeat = 2
+material = SubResource("ShaderMaterial_uubmn")
+position = Vector2(-24, 41)
+scale = Vector2(0.88, 0.88)
+points = PackedVector2Array(52, -33, 53, -33, 367, -33, 368, -33, 368, -32, 368.182, 111.364, 368.182, 112.5, 367.046, 112.5, 53.4091, 112.5, 52.2727, 112.5, 52.2727, 111.364, 52, -30.7848, 52, -32)
+closed = true
+width = 20.0
+texture = ExtResource("9_7yve1")
+texture_mode = 1
+joint_mode = 2
+begin_cap_mode = 2
+end_cap_mode = 2
+
+[node name="TypeBoxesCreator" type="Node" parent="CanvasLayer/Boxes/TypeBoxes"]
+script = ExtResource("14_ehslr")
+
+[node name="TypeObserver" type="Node" parent="CanvasLayer/Boxes/TypeBoxes"]
+script = ExtResource("8_80eaw")
+
+[node name="TypeStarterSetter" type="Node" parent="CanvasLayer/Boxes/TypeBoxes"]
+script = ExtResource("8_bqf8p")
+
+[node name="OctaveBoxes" type="Control" parent="CanvasLayer/Boxes"]
+visible = false
+modulate = Color(1, 1, 1, 0)
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="OctaveBoxesContainer" type="GridContainer" parent="CanvasLayer/Boxes/OctaveBoxes"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 1153.0
+offset_top = 179.0
+offset_right = 1793.0
+offset_bottom = 630.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_constants/h_separation = 320
+theme_override_constants/v_separation = 180
+columns = 3
+
+[node name="OctaveBoxContainer0" type="Control" parent="CanvasLayer/Boxes/OctaveBoxes/OctaveBoxesContainer"]
+layout_mode = 2
+
+[node name="Octave" type="RichTextLabel" parent="CanvasLayer/Boxes/OctaveBoxes/OctaveBoxesContainer/OctaveBoxContainer0"]
+z_index = 2
+material = ExtResource("20_mdq5s")
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -143.0
+offset_top = -71.0
+offset_right = 158.0
+offset_bottom = 76.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/outline_size = 50
+theme_override_font_sizes/normal_font_size = 100
+bbcode_enabled = true
+text = "3"
+fit_content = true
+horizontal_alignment = 1
+script = ExtResource("13_kdj3k")
+
+[node name="OctaveBoxesCreator" type="Node" parent="CanvasLayer/Boxes/OctaveBoxes"]
+script = ExtResource("13_vgx1v")
+
+[node name="OctaveObserver" type="Node" parent="CanvasLayer/Boxes/OctaveBoxes"]
+script = ExtResource("15_46k0i")
+
+[node name="OctaveStarterSetter" type="Node" parent="CanvasLayer/Boxes/OctaveBoxes"]
+script = ExtResource("14_p0mjq")
+
+[node name="InstrumentBoxes" type="Control" parent="CanvasLayer/Boxes"]
+visible = false
+modulate = Color(1, 1, 1, 0)
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="InstrumentsBoxesContainer" type="GridContainer" parent="CanvasLayer/Boxes/InstrumentBoxes"]
+layout_mode = 0
+offset_left = 1173.0
+offset_top = 199.0
+offset_right = 1813.0
+offset_bottom = 650.0
+theme_override_constants/h_separation = 320
+theme_override_constants/v_separation = 180
+columns = 3
+
+[node name="InstrumentBoxContainer0" type="Control" parent="CanvasLayer/Boxes/InstrumentBoxes/InstrumentsBoxesContainer"]
+layout_mode = 2
+script = ExtResource("17_nwpjc")
+
+[node name="Instrument" type="TextureRect" parent="CanvasLayer/Boxes/InstrumentBoxes/InstrumentsBoxesContainer/InstrumentBoxContainer0"]
+z_index = 2
+material = ExtResource("42_wmpjh")
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -88.0
+offset_top = -100.0
+offset_right = 87.0
+offset_bottom = 91.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.825, 0.825)
+pivot_offset = Vector2(87.5, 95.5)
+texture = ExtResource("27_f26l3")
+
+[node name="InstrumentBoxesCreator" type="Node" parent="CanvasLayer/Boxes/InstrumentBoxes"]
+script = ExtResource("18_vde7c")
+
+[node name="InstrumentObserver" type="Node" parent="CanvasLayer/Boxes/InstrumentBoxes"]
+script = ExtResource("20_i8jg1")
+
+[node name="InstrumentStarterSetter" type="Node" parent="CanvasLayer/Boxes/InstrumentBoxes"]
+script = ExtResource("21_d223m")
+
+[node name="VanishEffect" type="Node" parent="CanvasLayer/Boxes"]
+script = ExtResource("13_vj2ob")
+
+[node name="PianoLiberator" type="Node" parent="CanvasLayer/Boxes"]
+script = ExtResource("8_a6ljc")
+
+[node name="GlobalPianoManager" type="Node" parent="CanvasLayer/Boxes"]
+script = ExtResource("10_clqq7")
+
+[node name="FooterMenu" type="CenterContainer" parent="CanvasLayer"]
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -1170.0
+offset_top = -325.0
+offset_right = 1170.0
+offset_bottom = -285.0
+grow_horizontal = 2
+grow_vertical = 0
+pivot_offset = Vector2(1170, 0)
+
+[node name="HorizontalChangers" type="HBoxContainer" parent="CanvasLayer/FooterMenu"]
+layout_mode = 2
+theme_override_constants/separation = 760
+
+[node name="LeftChangerContainer" type="Control" parent="CanvasLayer/FooterMenu/HorizontalChangers"]
+layout_mode = 2
+
+[node name="LeftChanger" type="TextureButton" parent="CanvasLayer/FooterMenu/HorizontalChangers/LeftChangerContainer"]
+material = SubResource("ShaderMaterial_ss6mf")
+layout_mode = 0
+offset_right = 202.0
+offset_bottom = 235.0
+scale = Vector2(-1, 1)
+texture_normal = ExtResource("4_peh1p")
+
+[node name="Draggable_containers" type="Control" parent="CanvasLayer/FooterMenu/HorizontalChangers"]
+layout_mode = 2
+
+[node name="PianoDraggable" type="HBoxContainer" parent="CanvasLayer/FooterMenu/HorizontalChangers/Draggable_containers"]
+layout_mode = 1
+anchors_preset = 13
+anchor_left = 0.5
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -407.5
+offset_right = 407.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 530
+
+[node name="Drags0" type="Control" parent="CanvasLayer/FooterMenu/HorizontalChangers/Draggable_containers/PianoDraggable"]
+layout_mode = 2
+
+[node name="CDE" type="Control" parent="CanvasLayer/FooterMenu/HorizontalChangers/Draggable_containers/PianoDraggable/Drags0"]
+z_index = 1
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 139.5
+offset_top = 120.0
+offset_right = 139.5
+offset_bottom = 120.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.478885, 0.478885)
+mouse_filter = 1
+script = ExtResource("4_qsnf5")
+
+[node name="key0" type="TextureRect" parent="CanvasLayer/FooterMenu/HorizontalChangers/Draggable_containers/PianoDraggable/Drags0/CDE"]
+material = ExtResource("32_oouey")
+layout_mode = 2
+offset_left = -379.005
+offset_top = -250.582
+offset_right = -109.005
+offset_bottom = 265.418
+texture = ExtResource("4_oxi7j")
+
+[node name="key1" type="TextureRect" parent="CanvasLayer/FooterMenu/HorizontalChangers/Draggable_containers/PianoDraggable/Drags0/CDE"]
+material = ExtResource("32_oouey")
+layout_mode = 2
+offset_left = -133.005
+offset_top = -250.582
+offset_right = 136.995
+offset_bottom = 265.418
+texture = ExtResource("4_oxi7j")
+
+[node name="key2" type="TextureRect" parent="CanvasLayer/FooterMenu/HorizontalChangers/Draggable_containers/PianoDraggable/Drags0/CDE"]
+material = ExtResource("32_oouey")
+layout_mode = 2
+offset_left = 112.995
+offset_top = -250.582
+offset_right = 382.995
+offset_bottom = 265.418
+texture = ExtResource("4_oxi7j")
+
+[node name="black0" type="TextureRect" parent="CanvasLayer/FooterMenu/HorizontalChangers/Draggable_containers/PianoDraggable/Drags0/CDE"]
+material = ExtResource("34_oouey")
+layout_mode = 2
+offset_left = -205.915
+offset_top = -252.67
+offset_right = -35.9154
+offset_bottom = 72.3298
+texture = ExtResource("5_qsnf5")
+
+[node name="black1" type="TextureRect" parent="CanvasLayer/FooterMenu/HorizontalChangers/Draggable_containers/PianoDraggable/Drags0/CDE"]
+material = ExtResource("34_oouey")
+layout_mode = 2
+offset_left = 40.4896
+offset_top = -252.67
+offset_right = 210.49
+offset_bottom = 72.3298
+texture = ExtResource("5_qsnf5")
+
+[node name="Drags1" type="Control" parent="CanvasLayer/FooterMenu/HorizontalChangers/Draggable_containers/PianoDraggable"]
+layout_mode = 2
+
+[node name="FGAB" type="Control" parent="CanvasLayer/FooterMenu/HorizontalChangers/Draggable_containers/PianoDraggable/Drags1"]
+z_index = 1
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 114.5
+offset_top = 119.0
+offset_right = 114.5
+offset_bottom = 119.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.478885, 0.478885)
+script = ExtResource("7_kh251")
+metadata/_custom_type_script = "uid://d4cwlmrrhl6ie"
+
+[node name="key0" type="TextureRect" parent="CanvasLayer/FooterMenu/HorizontalChangers/Draggable_containers/PianoDraggable/Drags1/FGAB"]
+material = ExtResource("32_oouey")
+layout_mode = 2
+offset_left = -493.856
+offset_top = -248.494
+offset_right = -223.856
+offset_bottom = 267.506
+texture = ExtResource("4_oxi7j")
+
+[node name="key1" type="TextureRect" parent="CanvasLayer/FooterMenu/HorizontalChangers/Draggable_containers/PianoDraggable/Drags1/FGAB"]
+material = ExtResource("32_oouey")
+layout_mode = 2
+offset_left = -247.856
+offset_top = -248.494
+offset_right = 22.1444
+offset_bottom = 267.506
+texture = ExtResource("4_oxi7j")
+
+[node name="key2" type="TextureRect" parent="CanvasLayer/FooterMenu/HorizontalChangers/Draggable_containers/PianoDraggable/Drags1/FGAB"]
+material = ExtResource("32_oouey")
+layout_mode = 2
+offset_left = -1.85559
+offset_top = -248.494
+offset_right = 268.144
+offset_bottom = 267.506
+texture = ExtResource("4_oxi7j")
+
+[node name="key3" type="TextureRect" parent="CanvasLayer/FooterMenu/HorizontalChangers/Draggable_containers/PianoDraggable/Drags1/FGAB"]
+material = ExtResource("32_oouey")
+layout_mode = 2
+offset_left = 243.043
+offset_top = -248.494
+offset_right = 513.043
+offset_bottom = 267.506
+texture = ExtResource("4_oxi7j")
+
+[node name="black0" type="TextureRect" parent="CanvasLayer/FooterMenu/HorizontalChangers/Draggable_containers/PianoDraggable/Drags1/FGAB"]
+material = ExtResource("34_oouey")
+layout_mode = 2
+offset_left = -320.766
+offset_top = -250.582
+offset_right = -150.766
+offset_bottom = 74.4181
+texture = ExtResource("5_qsnf5")
+
+[node name="black1" type="TextureRect" parent="CanvasLayer/FooterMenu/HorizontalChangers/Draggable_containers/PianoDraggable/Drags1/FGAB"]
+material = ExtResource("34_oouey")
+layout_mode = 2
+offset_left = -74.3606
+offset_top = -250.582
+offset_right = 95.6394
+offset_bottom = 74.4181
+texture = ExtResource("5_qsnf5")
+
+[node name="black2" type="TextureRect" parent="CanvasLayer/FooterMenu/HorizontalChangers/Draggable_containers/PianoDraggable/Drags1/FGAB"]
+material = ExtResource("34_oouey")
+layout_mode = 2
+offset_left = 172.045
+offset_top = -250.582
+offset_right = 342.045
+offset_bottom = 74.4181
+texture = ExtResource("5_qsnf5")
+
+[node name="OctaveDraggable" type="HBoxContainer" parent="CanvasLayer/FooterMenu/HorizontalChangers/Draggable_containers"]
+visible = false
+modulate = Color(1, 1, 1, 0)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -627.0
+offset_top = 637.0
+offset_right = 547.0
+offset_bottom = 677.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 335
+alignment = 1
+
+[node name="Drags0" type="Control" parent="CanvasLayer/FooterMenu/HorizontalChangers/Draggable_containers/OctaveDraggable"]
+layout_mode = 2
+
+[node name="OctContainer" type="Control" parent="CanvasLayer/FooterMenu/HorizontalChangers/Draggable_containers/OctaveDraggable/Drags0"]
+layout_mode = 1
+anchors_preset = 9
+anchor_bottom = 1.0
+grow_vertical = 2
+script = ExtResource("23_bqsas")
+
+[node name="3" type="RichTextLabel" parent="CanvasLayer/FooterMenu/HorizontalChangers/Draggable_containers/OctaveDraggable/Drags0/OctContainer"]
+z_index = 2
+material = ExtResource("20_mdq5s")
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -50.0
+offset_top = -610.0
+offset_right = 50.0
+offset_bottom = -463.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 1
+theme_override_constants/outline_size = 50
+theme_override_font_sizes/normal_font_size = 100
+bbcode_enabled = true
+text = "3"
+fit_content = true
+horizontal_alignment = 1
+
+[node name="Drags1" type="Control" parent="CanvasLayer/FooterMenu/HorizontalChangers/Draggable_containers/OctaveDraggable"]
+layout_mode = 2
+
+[node name="OctContainer" type="Control" parent="CanvasLayer/FooterMenu/HorizontalChangers/Draggable_containers/OctaveDraggable/Drags1"]
+layout_mode = 1
+anchors_preset = 9
+anchor_bottom = 1.0
+grow_vertical = 2
+script = ExtResource("23_bqsas")
+metadata/_custom_type_script = "uid://g16omp13y0a2"
+
+[node name="4" type="RichTextLabel" parent="CanvasLayer/FooterMenu/HorizontalChangers/Draggable_containers/OctaveDraggable/Drags1/OctContainer"]
+z_index = 2
+material = ExtResource("20_mdq5s")
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -50.0
+offset_top = -610.0
+offset_right = 50.0
+offset_bottom = -463.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 1
+theme_override_constants/outline_size = 50
+theme_override_font_sizes/normal_font_size = 100
+bbcode_enabled = true
+text = "4"
+fit_content = true
+horizontal_alignment = 1
+
+[node name="Drags2" type="Control" parent="CanvasLayer/FooterMenu/HorizontalChangers/Draggable_containers/OctaveDraggable"]
+layout_mode = 2
+
+[node name="OctContainer" type="Control" parent="CanvasLayer/FooterMenu/HorizontalChangers/Draggable_containers/OctaveDraggable/Drags2"]
+layout_mode = 1
+anchors_preset = 9
+anchor_bottom = 1.0
+grow_vertical = 2
+script = ExtResource("23_bqsas")
+metadata/_custom_type_script = "uid://g16omp13y0a2"
+
+[node name="5" type="RichTextLabel" parent="CanvasLayer/FooterMenu/HorizontalChangers/Draggable_containers/OctaveDraggable/Drags2/OctContainer"]
+z_index = 2
+material = ExtResource("20_mdq5s")
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -50.0
+offset_top = -610.0
+offset_right = 50.0
+offset_bottom = -463.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 1
+theme_override_constants/outline_size = 50
+theme_override_font_sizes/normal_font_size = 100
+bbcode_enabled = true
+text = "5"
+fit_content = true
+horizontal_alignment = 1
+
+[node name="InstrumentDraggable" type="HBoxContainer" parent="CanvasLayer/FooterMenu/HorizontalChangers/Draggable_containers"]
+visible = false
+modulate = Color(1, 1, 1, 0)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -627.0
+offset_top = 637.0
+offset_right = 547.0
+offset_bottom = 677.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 335
+alignment = 1
+
+[node name="Drags0" type="Control" parent="CanvasLayer/FooterMenu/HorizontalChangers/Draggable_containers/InstrumentDraggable"]
+layout_mode = 2
+
+[node name="InsContainer" type="Control" parent="CanvasLayer/FooterMenu/HorizontalChangers/Draggable_containers/InstrumentDraggable/Drags0"]
+layout_mode = 1
+anchors_preset = 9
+anchor_bottom = 1.0
+grow_vertical = 2
+script = ExtResource("27_0t2sb")
+
+[node name="PIANO" type="TextureRect" parent="CanvasLayer/FooterMenu/HorizontalChangers/Draggable_containers/InstrumentDraggable/Drags0/InsContainer"]
+z_index = 2
+material = ExtResource("42_wmpjh")
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -50.0
+offset_top = -610.0
+offset_right = 50.0
+offset_bottom = -463.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("26_f8c1p")
+
+[node name="Drags1" type="Control" parent="CanvasLayer/FooterMenu/HorizontalChangers/Draggable_containers/InstrumentDraggable"]
+layout_mode = 2
+
+[node name="InsContainer" type="Control" parent="CanvasLayer/FooterMenu/HorizontalChangers/Draggable_containers/InstrumentDraggable/Drags1"]
+layout_mode = 1
+anchors_preset = 9
+anchor_bottom = 1.0
+grow_vertical = 2
+script = ExtResource("27_0t2sb")
+metadata/_custom_type_script = "uid://cfy3b1beu6dto"
+
+[node name="ORGAN" type="TextureRect" parent="CanvasLayer/FooterMenu/HorizontalChangers/Draggable_containers/InstrumentDraggable/Drags1/InsContainer"]
+z_index = 2
+material = ExtResource("42_wmpjh")
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -87.5
+offset_top = -632.0
+offset_right = 87.5
+offset_bottom = -441.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("27_f26l3")
+
+[node name="Drags2" type="Control" parent="CanvasLayer/FooterMenu/HorizontalChangers/Draggable_containers/InstrumentDraggable"]
+layout_mode = 2
+
+[node name="InsContainer" type="Control" parent="CanvasLayer/FooterMenu/HorizontalChangers/Draggable_containers/InstrumentDraggable/Drags2"]
+layout_mode = 1
+anchors_preset = 9
+anchor_bottom = 1.0
+grow_vertical = 2
+script = ExtResource("27_0t2sb")
+metadata/_custom_type_script = "uid://cfy3b1beu6dto"
+
+[node name="SQUARE" type="TextureRect" parent="CanvasLayer/FooterMenu/HorizontalChangers/Draggable_containers/InstrumentDraggable/Drags2/InsContainer"]
+z_index = 2
+material = ExtResource("42_wmpjh")
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -100.0
+offset_top = -636.5
+offset_right = 100.0
+offset_bottom = -436.5
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("28_imkbe")
+
+[node name="Drags3" type="Control" parent="CanvasLayer/FooterMenu/HorizontalChangers/Draggable_containers/InstrumentDraggable"]
+layout_mode = 2
+
+[node name="InsContainer" type="Control" parent="CanvasLayer/FooterMenu/HorizontalChangers/Draggable_containers/InstrumentDraggable/Drags3"]
+layout_mode = 1
+anchors_preset = 9
+anchor_bottom = 1.0
+grow_vertical = 2
+script = ExtResource("27_0t2sb")
+metadata/_custom_type_script = "uid://cfy3b1beu6dto"
+
+[node name="TRIANGLE" type="TextureRect" parent="CanvasLayer/FooterMenu/HorizontalChangers/Draggable_containers/InstrumentDraggable/Drags3/InsContainer"]
+z_index = 2
+material = ExtResource("42_wmpjh")
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -100.0
+offset_top = -625.0
+offset_right = 100.0
+offset_bottom = -448.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("29_imkbe")
+
+[node name="RightChangerContainer" type="Control" parent="CanvasLayer/FooterMenu/HorizontalChangers"]
+layout_mode = 2
+
+[node name="RightChanger" type="TextureButton" parent="CanvasLayer/FooterMenu/HorizontalChangers/RightChangerContainer"]
+material = SubResource("ShaderMaterial_ss6mf")
+layout_mode = 0
+offset_right = 168.0
+offset_bottom = 235.0
+texture_normal = ExtResource("4_peh1p")
+
+[node name="ChangerListener" type="Node" parent="CanvasLayer/FooterMenu"]
+script = ExtResource("22_7bpf7")
+
+[node name="SwapperEffect" type="Node" parent="CanvasLayer/FooterMenu"]
+script = ExtResource("23_1i3l7")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+&"": SubResource("AnimationLibrary_uhb7a")
+}
+autoplay = "buttons_animations"

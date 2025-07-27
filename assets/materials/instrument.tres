@@ -1,0 +1,6 @@
+[gd_resource type="ShaderMaterial" load_steps=2 format=3 uid="uid://ro8i34comcbv"]
+
+[ext_resource type="Shader" uid="uid://gnoupnabs8hm" path="res://assets/shaders/instrument.tres" id="1_odfid"]
+
+[resource]
+shader = ExtResource("1_odfid")

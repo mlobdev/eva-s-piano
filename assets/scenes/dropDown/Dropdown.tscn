@@ -1,0 +1,224 @@
+[gd_scene load_steps=14 format=3 uid="uid://w5axjno1vkf7"]
+
+[ext_resource type="Texture2D" uid="uid://dn7vnbh1c68so" path="res://assets/images/buttons/config.png" id="1_026vl"]
+[ext_resource type="Script" uid="uid://b0t0a3bws834p" path="res://assets/scenes/dropDown/scripts/dropdown.gd" id="1_cuy3w"]
+[ext_resource type="Script" uid="uid://odroy0nf1kp5" path="res://assets/scenes/dropDown/scripts/black_rect.gd" id="1_n8fxk"]
+[ext_resource type="Texture2D" uid="uid://dlx3rvfdoplxk" path="res://assets/images/buttons/dropdown_button.png" id="2_1vj0g"]
+[ext_resource type="Material" uid="uid://cwdkiv3oycoqk" path="res://assets/materials/dropdown.tres" id="3_lx424"]
+[ext_resource type="Script" uid="uid://dioykk2wmbwxk" path="res://assets/scenes/dropDown/scripts/dropdown_button.gd" id="4_ckopy"]
+[ext_resource type="Script" uid="uid://ctj5rih7n43ev" path="res://assets/scenes/dropDown/scripts/config_button.gd" id="5_pcphm"]
+[ext_resource type="Shader" uid="uid://dyhy4w27n5xvr" path="res://assets/shaders/background.tres" id="6_4memt"]
+[ext_resource type="Texture2D" uid="uid://c7bf3kdusa4ow" path="res://assets/images/buttons/eq.png" id="6_crji1"]
+[ext_resource type="Script" uid="uid://dna177e56gun4" path="res://assets/scenes/dropDown/scripts/config_wheel.gd" id="6_jbhn3"]
+[ext_resource type="Material" uid="uid://cq6h75srtfqtr" path="res://assets/materials/leftButton.tres" id="6_lx424"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_n8fxk"]
+atlas = ExtResource("2_1vj0g")
+region = Rect2(0, 0, 178.007, 478)
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_8hy03"]
+shader = ExtResource("6_4memt")
+
+[node name="Dropdown" type="HBoxContainer"]
+anchors_preset = -1
+anchor_right = 1.16
+anchor_bottom = 1.0
+offset_right = -0.400146
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 10
+size_flags_vertical = 2
+theme_override_constants/separation = 2332
+script = ExtResource("1_cuy3w")
+
+[node name="BlackRectContainer" type="Control" parent="."]
+layout_direction = 3
+layout_mode = 2
+metadata/_edit_use_anchors_ = true
+
+[node name="BlackRect" type="ColorRect" parent="BlackRectContainer"]
+self_modulate = Color(1, 1, 1, 0)
+z_index = 1
+layout_direction = 3
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.0
+offset_left = -2340.0
+offset_top = -630.0
+offset_right = 896.0
+offset_bottom = 1645.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 0.313726)
+script = ExtResource("1_n8fxk")
+
+[node name="ConfigContainer" type="Control" parent="."]
+z_index = 1
+layout_mode = 2
+size_flags_horizontal = 3
+mouse_filter = 2
+
+[node name="DropDownButtonContainer" type="Control" parent="ConfigContainer"]
+layout_mode = 2
+anchors_preset = 0
+offset_left = 8.0
+offset_top = 540.0
+offset_right = 8.0
+offset_bottom = 540.0
+pivot_offset = Vector2(-120, 0)
+size_flags_horizontal = 4
+size_flags_vertical = 4
+mouse_filter = 2
+
+[node name="DropDownButton" type="TextureButton" parent="ConfigContainer/DropDownButtonContainer"]
+z_index = 1
+material = ExtResource("3_lx424")
+layout_mode = 1
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = -89.0
+offset_top = -120.0
+offset_right = 89.0
+offset_bottom = 358.0
+grow_horizontal = 0
+grow_vertical = 2
+scale = Vector2(0.5, 0.5)
+texture_normal = SubResource("AtlasTexture_n8fxk")
+script = ExtResource("4_ckopy")
+
+[node name="GrayRect" type="ColorRect" parent="ConfigContainer"]
+z_index = 1
+material = SubResource("ShaderMaterial_8hy03")
+layout_mode = 1
+anchors_preset = -1
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_left = 8.0
+offset_top = -1235.0
+offset_right = 552.0
+offset_bottom = 2365.0
+grow_horizontal = 0
+grow_vertical = 0
+mouse_filter = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="ConfigContainer"]
+z_index = 2
+layout_mode = 2
+offset_left = 192.0
+offset_top = -43.0
+offset_right = 192.0
+offset_bottom = 1122.0
+grow_horizontal = 0
+grow_vertical = 2
+mouse_filter = 2
+theme_override_constants/separation = 258
+alignment = 1
+
+[node name="ConfigButtonContainer" type="Control" parent="ConfigContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 8
+mouse_filter = 2
+
+[node name="ConfigButton" type="TextureButton" parent="ConfigContainer/VBoxContainer/ConfigButtonContainer"]
+material = ExtResource("6_lx424")
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -450.0
+offset_top = -450.0
+offset_right = 450.0
+offset_bottom = 450.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.179, 0.179)
+pivot_offset = Vector2(450, 450)
+texture_normal = ExtResource("1_026vl")
+script = ExtResource("5_pcphm")
+
+[node name="SustainButtonContainer" type="Control" parent="ConfigContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 8
+mouse_filter = 2
+
+[node name="SustainWheel" type="TextureButton" parent="ConfigContainer/VBoxContainer/SustainButtonContainer"]
+material = ExtResource("3_lx424")
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -480.0
+offset_top = -480.0
+offset_right = 480.0
+offset_bottom = 480.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.165, 0.165)
+pivot_offset = Vector2(480, 480)
+texture_normal = ExtResource("6_crji1")
+script = ExtResource("6_jbhn3")
+effect_name = "Sustain"
+metadata/_custom_type_script = "uid://dna177e56gun4"
+
+[node name="TremoloButtonContainer" type="Control" parent="ConfigContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 8
+mouse_filter = 2
+
+[node name="TremoloWheel" type="TextureButton" parent="ConfigContainer/VBoxContainer/TremoloButtonContainer"]
+material = ExtResource("3_lx424")
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -480.0
+offset_top = -480.0
+offset_right = 480.0
+offset_bottom = 480.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.165, 0.165)
+pivot_offset = Vector2(480, 480)
+texture_normal = ExtResource("6_crji1")
+script = ExtResource("6_jbhn3")
+effect_name = "Tremolo"
+metadata/_custom_type_script = "uid://dna177e56gun4"
+
+[node name="EchoButtonContainer2" type="Control" parent="ConfigContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 8
+mouse_filter = 2
+
+[node name="EchoWheel" type="TextureButton" parent="ConfigContainer/VBoxContainer/EchoButtonContainer2"]
+material = ExtResource("3_lx424")
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -480.0
+offset_top = -480.0
+offset_right = 480.0
+offset_bottom = 480.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.165, 0.165)
+pivot_offset = Vector2(480, 480)
+texture_normal = ExtResource("6_crji1")
+script = ExtResource("6_jbhn3")
+effect_name = "Echo"
+metadata/_custom_type_script = "uid://dna177e56gun4"

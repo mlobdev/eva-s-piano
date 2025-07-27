@@ -1,0 +1,8 @@
+[gd_resource type="ShaderMaterial" load_steps=2 format=3 uid="uid://c7oxlxr3um7qu"]
+
+[ext_resource type="Shader" uid="uid://dneokfkr4m778" path="res://assets/shaders/paletteButton.tres" id="1_0g0ji"]
+
+[resource]
+shader = ExtResource("1_0g0ji")
+shader_parameter/accent_color = Color(1, 0, 0, 1)
+shader_parameter/main_color = Color(1, 0, 0, 1)

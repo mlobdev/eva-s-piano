@@ -1,0 +1,141 @@
+[gd_scene load_steps=7 format=3 uid="uid://cjlfy2iiorov7"]
+
+[ext_resource type="Script" uid="uid://dg0l2nsh3wv80" path="res://assets/scenes/keyboard/scripts/key_creator.gd" id="1_4t4qe"]
+[ext_resource type="Script" uid="uid://dplvc6jtoqlap" path="res://assets/scenes/keyboard/scripts/piano_creator.gd" id="1_fnct7"]
+[ext_resource type="Script" uid="uid://dci3wm755clcf" path="res://assets/scenes/sound/scripts/sound_mediator.gd" id="2_fnct7"]
+[ext_resource type="Script" uid="uid://fywa4b77fmr2" path="res://assets/scenes/keyboard/scripts/bitmask_manager.gd" id="4_r0f1v"]
+[ext_resource type="Script" uid="uid://bhdli087hjp83" path="res://assets/scenes/keyboard/scripts/container.gd" id="5_51t6l"]
+[ext_resource type="Script" uid="uid://dwauvgpp7xja" path="res://assets/scenes/keyboard/scripts/wrapper_creator.gd" id="9_xwyal"]
+
+[node name="Keyboard" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_fnct7")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="SoundMediator" type="Node" parent="CanvasLayer"]
+script = ExtResource("2_fnct7")
+
+[node name="KeyCreator" type="Node" parent="CanvasLayer"]
+script = ExtResource("1_4t4qe")
+
+[node name="BitmaskManager" type="Node" parent="CanvasLayer/KeyCreator"]
+script = ExtResource("4_r0f1v")
+
+[node name="Wrappers" type="Control" parent="CanvasLayer"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("9_xwyal")
+
+[node name="Control" type="Control" parent="CanvasLayer"]
+layout_mode = 3
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -2340.0
+offset_right = -2340.0
+grow_horizontal = 0
+
+[node name="HBox0" type="HBoxContainer" parent="CanvasLayer"]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -4.0
+offset_top = -452.0
+offset_right = 4.0
+offset_bottom = -452.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = -6
+
+[node name="Container0" type="MarginContainer" parent="CanvasLayer/HBox0"]
+layout_mode = 2
+size_flags_horizontal = 3
+mouse_filter = 2
+script = ExtResource("5_51t6l")
+
+[node name="Container1" type="MarginContainer" parent="CanvasLayer/HBox0"]
+layout_mode = 2
+size_flags_horizontal = 3
+mouse_filter = 2
+theme_override_constants/margin_left = -10
+script = ExtResource("5_51t6l")
+metadata/_custom_type_script = "uid://bhdli087hjp83"
+
+[node name="Container2" type="MarginContainer" parent="CanvasLayer/HBox0"]
+layout_mode = 2
+size_flags_horizontal = 3
+mouse_filter = 2
+script = ExtResource("5_51t6l")
+metadata/_custom_type_script = "uid://bhdli087hjp83"
+
+[node name="HBox1" type="HBoxContainer" parent="CanvasLayer"]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -4.0
+offset_top = -160.0
+offset_right = 4.0
+offset_bottom = -160.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = -6
+
+[node name="Container3" type="MarginContainer" parent="CanvasLayer/HBox1"]
+layout_mode = 2
+size_flags_horizontal = 3
+mouse_filter = 2
+script = ExtResource("5_51t6l")
+
+[node name="Container4" type="MarginContainer" parent="CanvasLayer/HBox1"]
+layout_mode = 2
+size_flags_horizontal = 3
+mouse_filter = 2
+theme_override_constants/margin_left = -10
+script = ExtResource("5_51t6l")
+metadata/_custom_type_script = "uid://bhdli087hjp83"
+
+[node name="Container5" type="MarginContainer" parent="CanvasLayer/HBox1"]
+layout_mode = 2
+size_flags_horizontal = 3
+mouse_filter = 2
+script = ExtResource("5_51t6l")
+metadata/_custom_type_script = "uid://bhdli087hjp83"
+
+[node name="HBox2" type="HBoxContainer" parent="CanvasLayer"]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -4.0
+offset_top = 125.0
+offset_right = 4.0
+offset_bottom = 125.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = -6
+
+[node name="Container6" type="MarginContainer" parent="CanvasLayer/HBox2"]
+layout_mode = 2
+script = ExtResource("5_51t6l")
+metadata/_custom_type_script = "uid://bhdli087hjp83"
+
+[node name="Container7" type="MarginContainer" parent="CanvasLayer/HBox2"]
+layout_mode = 2
+script = ExtResource("5_51t6l")
+metadata/_custom_type_script = "uid://bhdli087hjp83"
+
+[node name="Container8" type="MarginContainer" parent="CanvasLayer/HBox2"]
+layout_mode = 2
+script = ExtResource("5_51t6l")
+metadata/_custom_type_script = "uid://bhdli087hjp83"

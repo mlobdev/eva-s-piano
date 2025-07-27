@@ -1,0 +1,50 @@
+[gd_resource type="VisualShader" load_steps=4 format=3 uid="uid://gnoupnabs8hm"]
+
+[sub_resource type="VisualShaderNodeColorParameter" id="VisualShaderNodeColorParameter_2brix"]
+parameter_name = "main_color"
+qualifier = 1
+
+[sub_resource type="VisualShaderNodeMix" id="VisualShaderNodeMix_j6v3p"]
+default_input_values = [0, Quaternion(0, 0, 0, 0), 1, Quaternion(0, 0, 0, 0), 2, 0.0]
+op_type = 6
+
+[sub_resource type="VisualShaderNodeInput" id="VisualShaderNodeInput_ufe14"]
+input_name = "color"
+
+[resource]
+code = "shader_type canvas_item;
+render_mode blend_mix;
+
+global uniform vec4 main_color : source_color;
+
+
+
+void fragment() {
+// ColorParameter:2
+	vec4 n_out2p0 = main_color;
+
+
+// Input:4
+	vec4 n_out4p0 = COLOR;
+
+
+// Mix:3
+	vec4 n_in3p0 = vec4(0.00000, 0.00000, 0.00000, 0.00000);
+	vec4 n_out3p0 = mix(n_in3p0, n_out2p0, n_out4p0.x);
+
+
+// Output:0
+	COLOR.rgb = vec3(n_out3p0.xyz);
+
+
+}
+"
+mode = 1
+flags/light_only = false
+nodes/fragment/2/node = SubResource("VisualShaderNodeColorParameter_2brix")
+nodes/fragment/2/position = Vector2(-180, 80)
+nodes/fragment/3/node = SubResource("VisualShaderNodeMix_j6v3p")
+nodes/fragment/3/position = Vector2(180, 160)
+nodes/fragment/4/node = SubResource("VisualShaderNodeInput_ufe14")
+nodes/fragment/4/position = Vector2(-180, 280)
+nodes/fragment/connections = PackedInt32Array(2, 0, 3, 1, 3, 0, 0, 0, 4, 0, 3, 2)

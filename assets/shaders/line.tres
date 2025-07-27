@@ -1,0 +1,65 @@
+[gd_resource type="VisualShader" load_steps=5 format=3 uid="uid://b07ot6oiuv426"]
+
+[sub_resource type="VisualShaderNodeColorParameter" id="VisualShaderNodeColorParameter_8dp2m"]
+parameter_name = "highlight_color"
+qualifier = 1
+
+[sub_resource type="VisualShaderNodeInput" id="VisualShaderNodeInput_8dp2m"]
+input_name = "time"
+
+[sub_resource type="VisualShaderNodeInput" id="VisualShaderNodeInput_sylob"]
+input_name = "uv"
+
+[sub_resource type="VisualShaderNodeFloatOp" id="VisualShaderNodeFloatOp_sqrkx"]
+
+[resource]
+code = "shader_type canvas_item;
+render_mode blend_mix;
+
+global uniform vec4 highlight_color : source_color;
+
+
+
+void vertex() {
+// Input:4
+	vec2 n_out4p0 = UV;
+
+
+// Input:2
+	float n_out2p0 = TIME;
+
+
+// FloatOp:5
+	float n_out5p0 = n_out4p0.x + n_out2p0;
+
+
+// Output:0
+	UV = vec2(n_out5p0);
+
+
+}
+
+void fragment() {
+// ColorParameter:2
+	vec4 n_out2p0 = highlight_color;
+
+
+// Output:0
+	COLOR.rgb = vec3(n_out2p0.xyz);
+
+
+}
+"
+mode = 1
+flags/light_only = false
+nodes/vertex/2/node = SubResource("VisualShaderNodeInput_8dp2m")
+nodes/vertex/2/position = Vector2(-240, 340)
+nodes/vertex/4/node = SubResource("VisualShaderNodeInput_sylob")
+nodes/vertex/4/position = Vector2(-240, 240)
+nodes/vertex/5/node = SubResource("VisualShaderNodeFloatOp_sqrkx")
+nodes/vertex/5/position = Vector2(120, 220)
+nodes/vertex/connections = PackedInt32Array(4, 0, 5, 0, 2, 0, 5, 1, 5, 0, 0, 1)
+nodes/fragment/0/position = Vector2(400, 160)
+nodes/fragment/2/node = SubResource("VisualShaderNodeColorParameter_8dp2m")
+nodes/fragment/2/position = Vector2(40, 180)
+nodes/fragment/connections = PackedInt32Array(2, 0, 0, 0)

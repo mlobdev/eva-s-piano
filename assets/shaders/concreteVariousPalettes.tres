@@ -1,0 +1,133 @@
+[gd_resource type="VisualShader" load_steps=11 format=3 uid="uid://6fk7rn7yoscy"]
+
+[sub_resource type="VisualShaderNodeBooleanConstant" id="VisualShaderNodeBooleanConstant_xa7ay"]
+constant = true
+
+[sub_resource type="VisualShaderNodeBooleanConstant" id="VisualShaderNodeBooleanConstant_70w22"]
+constant = true
+
+[sub_resource type="VisualShaderNodeMix" id="VisualShaderNodeMix_xa7ay"]
+default_input_values = [0, Quaternion(0, 0, 0, 0), 1, Quaternion(1, 1, 1, 1), 2, Quaternion(0.5, 0.5, 0.5, 0.5)]
+op_type = 5
+
+[sub_resource type="VisualShaderNodeColorParameter" id="VisualShaderNodeColorParameter_70w22"]
+parameter_name = "specific_color"
+
+[sub_resource type="VisualShaderNodeColorParameter" id="VisualShaderNodeColorParameter_on2rn"]
+parameter_name = "specific_color2"
+
+[sub_resource type="VisualShaderNodeInput" id="VisualShaderNodeInput_wi6tt"]
+input_name = "color"
+
+[sub_resource type="VisualShaderNodeMix" id="VisualShaderNodeMix_on2rn"]
+output_port_for_preview = 0
+default_input_values = [0, Quaternion(0, 0, 0, 0), 1, Quaternion(1, 1, 1, 1), 2, 0.5]
+op_type = 6
+
+[sub_resource type="VisualShaderNodeBooleanParameter" id="VisualShaderNodeBooleanParameter_wi6tt"]
+parameter_name = "focusing"
+
+[sub_resource type="VisualShaderNodeIf" id="VisualShaderNodeIf_0ba60"]
+output_port_for_preview = 0
+default_input_values = [0, 0.0, 1, 1.0, 2, 0.001, 3, Vector3(0, 0, 0), 4, Vector3(0, 0, 0), 5, Vector3(0, 0, 0)]
+
+[sub_resource type="VisualShaderNodeColorParameter" id="VisualShaderNodeColorParameter_7drbc"]
+parameter_name = "custom_background_color"
+qualifier = 1
+
+[resource]
+code = "shader_type canvas_item;
+render_mode blend_mix;
+
+uniform vec4 specific_color : source_color;
+global uniform vec4 custom_background_color : source_color;
+uniform vec4 specific_color2 : source_color;
+uniform bool focusing;
+
+
+
+void fragment() {
+// ColorParameter:3
+	vec4 n_out3p0 = specific_color;
+
+
+// ColorParameter:9
+	vec4 n_out9p0 = custom_background_color;
+
+
+// ColorParameter:4
+	vec4 n_out4p0 = specific_color2;
+
+
+// BooleanParameter:7
+	bool n_out7p0 = focusing;
+
+
+// BooleanConstant:10
+	bool n_out10p0 = true;
+
+
+// BooleanConstant:11
+	bool n_out11p0 = true;
+
+
+	vec3 n_out8p0;
+// If:8
+	float n_in8p2 = 0.00100;
+	vec3 n_in8p3 = vec3(0.00000, 0.00000, 0.00000);
+	vec3 n_in8p4 = vec3(0.00000, 0.00000, 0.00000);
+	if(abs((n_out7p0 ? 1.0 : 0.0) - (n_out10p0 ? 1.0 : 0.0)) < n_in8p2)
+	{
+		n_out8p0 = n_in8p3;
+	}
+	else if((n_out7p0 ? 1.0 : 0.0) < (n_out10p0 ? 1.0 : 0.0))
+	{
+		n_out8p0 = vec3(n_out11p0 ? 1.0 : 0.0);
+	}
+	else
+	{
+		n_out8p0 = n_in8p4;
+	}
+
+
+// Mix:6
+	vec4 n_out6p0 = mix(n_out9p0, n_out4p0, n_out8p0.x);
+
+
+// Input:5
+	vec4 n_out5p0 = COLOR;
+
+
+// Mix:2
+	vec4 n_out2p0 = mix(n_out3p0, n_out6p0, n_out5p0);
+
+
+// Output:0
+	COLOR.rgb = vec3(n_out2p0.xyz);
+
+
+}
+"
+mode = 1
+flags/light_only = false
+nodes/fragment/2/node = SubResource("VisualShaderNodeMix_xa7ay")
+nodes/fragment/2/position = Vector2(180, 100)
+nodes/fragment/3/node = SubResource("VisualShaderNodeColorParameter_70w22")
+nodes/fragment/3/position = Vector2(-180, -160)
+nodes/fragment/4/node = SubResource("VisualShaderNodeColorParameter_on2rn")
+nodes/fragment/4/position = Vector2(-580, 120)
+nodes/fragment/5/node = SubResource("VisualShaderNodeInput_wi6tt")
+nodes/fragment/5/position = Vector2(-200, 540)
+nodes/fragment/6/node = SubResource("VisualShaderNodeMix_on2rn")
+nodes/fragment/6/position = Vector2(-180, 180)
+nodes/fragment/7/node = SubResource("VisualShaderNodeBooleanParameter_wi6tt")
+nodes/fragment/7/position = Vector2(-920, 300)
+nodes/fragment/8/node = SubResource("VisualShaderNodeIf_0ba60")
+nodes/fragment/8/position = Vector2(-460, 320)
+nodes/fragment/9/node = SubResource("VisualShaderNodeColorParameter_7drbc")
+nodes/fragment/9/position = Vector2(-540, -80)
+nodes/fragment/10/node = SubResource("VisualShaderNodeBooleanConstant_xa7ay")
+nodes/fragment/10/position = Vector2(-880, 480)
+nodes/fragment/11/node = SubResource("VisualShaderNodeBooleanConstant_70w22")
+nodes/fragment/11/position = Vector2(-880, 600)
+nodes/fragment/connections = PackedInt32Array(2, 0, 0, 0, 3, 0, 2, 0, 5, 0, 2, 2, 8, 0, 6, 2, 7, 0, 8, 0, 10, 0, 8, 1, 11, 0, 8, 5, 6, 0, 2, 1, 4, 0, 6, 1, 9, 0, 6, 0)

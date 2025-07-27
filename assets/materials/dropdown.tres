@@ -1,0 +1,6 @@
+[gd_resource type="ShaderMaterial" load_steps=2 format=3 uid="uid://cwdkiv3oycoqk"]
+
+[ext_resource type="Shader" uid="uid://b1h7vh26e5hme" path="res://assets/shaders/dropdownButton.tres" id="1_666fx"]
+
+[resource]
+shader = ExtResource("1_666fx")

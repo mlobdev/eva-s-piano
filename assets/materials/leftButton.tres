@@ -1,0 +1,6 @@
+[gd_resource type="ShaderMaterial" load_steps=2 format=3 uid="uid://cq6h75srtfqtr"]
+
+[ext_resource type="Shader" uid="uid://br7qg6pdmkyis" path="res://assets/shaders/leftButton.tres" id="1_cpf1g"]
+
+[resource]
+shader = ExtResource("1_cpf1g")

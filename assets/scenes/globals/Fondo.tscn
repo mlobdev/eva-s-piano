@@ -1,0 +1,17 @@
+[gd_scene load_steps=3 format=3 uid="uid://dkxorcrakldqb"]
+
+[ext_resource type="Shader" uid="uid://dyhy4w27n5xvr" path="res://assets/shaders/background.tres" id="1_q8l6v"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_mh24n"]
+shader = ExtResource("1_q8l6v")
+
+[node name="Background" type="ColorRect"]
+material = SubResource("ShaderMaterial_mh24n")
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 6
+size_flags_vertical = 6
+metadata/_edit_use_anchors_ = true

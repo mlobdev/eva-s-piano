@@ -1,0 +1,87 @@
+; Engine configuration file.
+; It's best edited using the editor UI and not directly,
+; since the parameters that go here are not all obvious.
+;
+; Format:
+;   [section] ; section goes between []
+;   param=value ; assign values to parameters
+
+config_version=5
+
+[application]
+
+config/name="Eva's Piano"
+run/main_scene="uid://jxr8mso6lgfw"
+config/quit_on_go_back=false
+config/features=PackedStringArray("4.4", "Mobile")
+run/max_fps=60
+boot_splash/image="uid://o1xvfhhudvhb"
+config/icon="uid://cpb5u4gscblht"
+boot_splash/minimum_display_time=2000
+
+[autoload]
+
+Global="*res://assets/scenes/globals/scripts/global.gd"
+
+[display]
+
+window/size/viewport_width=2340
+window/size/viewport_height=1080
+window/size/initial_position_type=0
+window/size/no_focus=true
+window/size/window_width_override=1170
+window/size/window_height_override=540
+window/stretch/mode="canvas_items"
+window/stretch/aspect="expand"
+
+[input_devices]
+
+pointing/emulate_touch_from_mouse=true
+
+[rendering]
+
+renderer/rendering_method="mobile"
+textures/vram_compression/import_etc2_astc=true
+
+[shader_globals]
+
+background_color={
+"type": "color",
+"value": Color(1, 1, 1, 1)
+}
+accent_color={
+"type": "color",
+"value": Color(0, 0, 0, 1)
+}
+main_color={
+"type": "color",
+"value": Color(1, 1, 1, 1)
+}
+shadow_color={
+"type": "color",
+"value": Color(1, 1, 1, 1)
+}
+highlight_color={
+"type": "color",
+"value": Color(0, 0, 0, 1)
+}
+custom_accent_color={
+"type": "color",
+"value": Color(0, 0, 0, 1)
+}
+custom_background_color={
+"type": "color",
+"value": Color(1, 1, 1, 1)
+}
+custom_highlight_color={
+"type": "color",
+"value": Color(0, 0, 0, 1)
+}
+custom_main_color={
+"type": "color",
+"value": Color(1, 1, 1, 1)
+}
+custom_shadow_color={
+"type": "color",
+"value": Color(1, 1, 1, 1)
+}

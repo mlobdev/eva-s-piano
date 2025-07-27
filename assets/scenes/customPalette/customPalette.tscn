@@ -1,0 +1,387 @@
+[gd_scene load_steps=36 format=3 uid="uid://3i7uo63ymbkd"]
+
+[ext_resource type="Script" uid="uid://ij4kre6ixxp3" path="res://assets/scenes/customPalette/scripts/custom_palette.gd" id="1_72efw"]
+[ext_resource type="Texture2D" uid="uid://c7lkdu3r2a5bi" path="res://assets/images/buttons/purecolor.png" id="1_nv0x1"]
+[ext_resource type="Shader" uid="uid://p6jox6j1x6s1" path="res://assets/shaders/custom_background.tres" id="2_4xvow"]
+[ext_resource type="Texture2D" uid="uid://dvrcvd33yg620" path="res://assets/images/config/phone.png" id="2_6oxir"]
+[ext_resource type="Shader" uid="uid://chowwilcdaxym" path="res://assets/shaders/customWhiteKey.tres" id="3_1gr7f"]
+[ext_resource type="Shader" uid="uid://dpr1ed8tspubc" path="res://assets/shaders/specificCustomColor.tres" id="3_256id"]
+[ext_resource type="Texture2D" uid="uid://bans6txan2klt" path="res://assets/images/buttons/back.png" id="5_6oxir"]
+[ext_resource type="Shader" uid="uid://m783gckdk43i" path="res://assets/shaders/genericCustomButtons.tres" id="5_g0hag"]
+[ext_resource type="Shader" uid="uid://jp87l0my2628" path="res://assets/shaders/customBlackKey.tres" id="5_t02dn"]
+[ext_resource type="Texture2D" uid="uid://cbled5nrf8f61" path="res://assets/images/buttons/confirm.png" id="6_t6lne"]
+[ext_resource type="Shader" uid="uid://w1lbovlvbpkb" path="res://assets/shaders/customPhone.tres" id="7_3pfdu"]
+[ext_resource type="Texture2D" uid="uid://rco6hu8jw2l5" path="res://assets/images/buttons/palette.png" id="7_t6xxb"]
+[ext_resource type="Script" uid="uid://cjoe8w2xp0jlw" path="res://assets/scenes/customPalette/scripts/back_button.gd" id="8_5ad7s"]
+[ext_resource type="Script" uid="uid://pfpqknet5xef" path="res://assets/scenes/customPalette/scripts/confirm_button.gd" id="9_72efw"]
+[ext_resource type="Shader" uid="uid://6fk7rn7yoscy" path="res://assets/shaders/concreteVariousPalettes.tres" id="11_wrjcd"]
+[ext_resource type="Script" uid="uid://chpisw3wh8eav" path="res://assets/scenes/customPalette/scripts/gcm.gd" id="13_256id"]
+[ext_resource type="Script" uid="uid://caq5ul824hlgt" path="res://assets/scenes/customPalette/scripts/gcdm.gd" id="14_60yao"]
+[ext_resource type="Script" uid="uid://crfj4lgcevd2h" path="res://assets/scenes/customPalette/scripts/focus_buttons_observer.gd" id="15_wrjcd"]
+[ext_resource type="Script" uid="uid://b7gwdlgfk27pn" path="res://assets/scenes/customPalette/scripts/focus_palettes_observer.gd" id="16_hb18j"]
+[ext_resource type="Script" uid="uid://dc2dpu30b4vts" path="res://assets/scenes/customPalette/scripts/specific_colors_manager.gd" id="17_hb18j"]
+[ext_resource type="Texture2D" uid="uid://1hp4jifqnxry" path="res://assets/images/keyboard/white_key.png" id="20_t02dn"]
+[ext_resource type="Texture2D" uid="uid://dlqt46ptqom3f" path="res://assets/images/keyboard/black_key.png" id="22_coiu0"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_t02dn"]
+shader = ExtResource("2_4xvow")
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_coiu0"]
+shader = ExtResource("3_1gr7f")
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_psgt2"]
+shader = ExtResource("5_t02dn")
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_7h1i0"]
+shader = ExtResource("7_3pfdu")
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_60yao"]
+shader = ExtResource("3_256id")
+shader_parameter/specific_color = Color(0, 0, 0, 1)
+shader_parameter/focusing = false
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_wrjcd"]
+shader = ExtResource("3_256id")
+shader_parameter/specific_color = Color(0, 0, 0, 1)
+shader_parameter/focusing = false
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_hb18j"]
+shader = ExtResource("3_256id")
+shader_parameter/specific_color = Color(0, 0, 0, 1)
+shader_parameter/focusing = false
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_4xvow"]
+shader = ExtResource("3_256id")
+shader_parameter/specific_color = Color(0, 0, 0, 1)
+shader_parameter/focusing = false
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_1gr7f"]
+shader = ExtResource("3_256id")
+shader_parameter/specific_color = Color(0, 0, 0, 1)
+shader_parameter/focusing = false
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_uxaal"]
+shader = ExtResource("5_g0hag")
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_sff1c"]
+shader = ExtResource("11_wrjcd")
+shader_parameter/specific_color = Color(0, 0, 0, 1)
+shader_parameter/specific_color2 = Color(0, 0, 0, 1)
+shader_parameter/focusing = false
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_7mh3h"]
+shader = ExtResource("11_wrjcd")
+shader_parameter/specific_color = Color(0, 0, 0, 1)
+shader_parameter/specific_color2 = Color(0, 0, 0, 1)
+shader_parameter/focusing = false
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_v3uph"]
+shader = ExtResource("11_wrjcd")
+shader_parameter/specific_color = Color(0, 0, 0, 1)
+shader_parameter/specific_color2 = Color(0, 0, 0, 1)
+shader_parameter/focusing = false
+
+[node name="customPalettes" type="Control"]
+z_index = 2
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_72efw")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+material = SubResource("ShaderMaterial_t02dn")
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="CDE" type="Control" parent="ColorRect"]
+z_index = 1
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_left = 459.0
+offset_right = 459.0
+grow_vertical = 2
+scale = Vector2(0.478885, 0.478885)
+mouse_filter = 1
+
+[node name="key0" type="TextureRect" parent="ColorRect/CDE"]
+material = SubResource("ShaderMaterial_coiu0")
+layout_mode = 2
+offset_left = -379.005
+offset_top = -250.582
+offset_right = -109.005
+offset_bottom = 265.418
+texture = ExtResource("20_t02dn")
+
+[node name="key1" type="TextureRect" parent="ColorRect/CDE"]
+material = SubResource("ShaderMaterial_coiu0")
+layout_mode = 2
+offset_left = -133.005
+offset_top = -250.582
+offset_right = 136.995
+offset_bottom = 265.418
+texture = ExtResource("20_t02dn")
+
+[node name="key2" type="TextureRect" parent="ColorRect/CDE"]
+material = SubResource("ShaderMaterial_coiu0")
+layout_mode = 2
+offset_left = 112.995
+offset_top = -250.582
+offset_right = 382.995
+offset_bottom = 265.418
+texture = ExtResource("20_t02dn")
+
+[node name="black0" type="TextureRect" parent="ColorRect/CDE"]
+material = SubResource("ShaderMaterial_psgt2")
+layout_mode = 2
+offset_left = -205.915
+offset_top = -252.67
+offset_right = -35.9154
+offset_bottom = 72.3298
+texture = ExtResource("22_coiu0")
+
+[node name="black1" type="TextureRect" parent="ColorRect/CDE"]
+material = SubResource("ShaderMaterial_psgt2")
+layout_mode = 2
+offset_left = 40.4896
+offset_top = -252.67
+offset_right = 210.49
+offset_bottom = 72.3298
+texture = ExtResource("22_coiu0")
+
+[node name="Phone" type="TextureRect" parent="ColorRect"]
+material = SubResource("ShaderMaterial_7h1i0")
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_left = -131.0
+offset_top = -326.5
+offset_right = 1152.0
+offset_bottom = 326.5
+grow_vertical = 2
+scale = Vector2(0.7, 0.7)
+pivot_offset = Vector2(641.5, 326.5)
+texture = ExtResource("2_6oxir")
+
+[node name="ColorsContainers" type="HBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_left = 139.0
+offset_top = 386.0
+offset_right = 979.0
+offset_bottom = 386.0
+grow_vertical = 2
+theme_override_constants/separation = 210
+
+[node name="ButtonContainer" type="Control" parent="ColorsContainers"]
+layout_mode = 2
+
+[node name="custom_main_color" type="TextureButton" parent="ColorsContainers/ButtonContainer"]
+material = SubResource("ShaderMaterial_60yao")
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.3, 0.3)
+pivot_offset = Vector2(278.5, 278.5)
+texture_normal = ExtResource("1_nv0x1")
+
+[node name="ButtonContainer2" type="Control" parent="ColorsContainers"]
+layout_mode = 2
+
+[node name="custom_accent_color" type="TextureButton" parent="ColorsContainers/ButtonContainer2"]
+material = SubResource("ShaderMaterial_wrjcd")
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.3, 0.3)
+pivot_offset = Vector2(278.5, 278.5)
+texture_normal = ExtResource("1_nv0x1")
+
+[node name="ButtonContainer3" type="Control" parent="ColorsContainers"]
+layout_mode = 2
+
+[node name="custom_background_color" type="TextureButton" parent="ColorsContainers/ButtonContainer3"]
+material = SubResource("ShaderMaterial_hb18j")
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.3, 0.3)
+pivot_offset = Vector2(278.5, 278.5)
+texture_normal = ExtResource("1_nv0x1")
+
+[node name="ButtonContainer4" type="Control" parent="ColorsContainers"]
+layout_mode = 2
+
+[node name="custom_shadow_color" type="TextureButton" parent="ColorsContainers/ButtonContainer4"]
+material = SubResource("ShaderMaterial_4xvow")
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.3, 0.3)
+pivot_offset = Vector2(278.5, 278.5)
+texture_normal = ExtResource("1_nv0x1")
+
+[node name="ButtonContainer5" type="Control" parent="ColorsContainers"]
+layout_mode = 2
+
+[node name="custom_highlight_color" type="TextureButton" parent="ColorsContainers/ButtonContainer5"]
+material = SubResource("ShaderMaterial_1gr7f")
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.3, 0.3)
+pivot_offset = Vector2(278.5, 278.5)
+texture_normal = ExtResource("1_nv0x1")
+
+[node name="ButtonsContainer" type="HBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_left = 139.0
+offset_top = -385.0
+offset_right = 979.0
+offset_bottom = -385.0
+grow_vertical = 2
+theme_override_constants/separation = 210
+
+[node name="ButtonContainer" type="Control" parent="ButtonsContainer"]
+layout_mode = 2
+
+[node name="BackButton" type="TextureButton" parent="ButtonsContainer/ButtonContainer"]
+material = SubResource("ShaderMaterial_uxaal")
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.3, 0.3)
+pivot_offset = Vector2(278.5, 278.5)
+texture_normal = ExtResource("5_6oxir")
+script = ExtResource("8_5ad7s")
+
+[node name="ButtonContainer2" type="Control" parent="ButtonsContainer"]
+layout_mode = 2
+
+[node name="ConfirmButton" type="TextureButton" parent="ButtonsContainer/ButtonContainer2"]
+material = SubResource("ShaderMaterial_uxaal")
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.3, 0.3)
+pivot_offset = Vector2(278.5, 278.5)
+texture_normal = ExtResource("6_t6lne")
+script = ExtResource("9_72efw")
+
+[node name="ButtonContainer3" type="Control" parent="ButtonsContainer"]
+layout_mode = 2
+
+[node name="PaletteButton" type="TextureButton" parent="ButtonsContainer/ButtonContainer3"]
+material = SubResource("ShaderMaterial_sff1c")
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.3, 0.3)
+pivot_offset = Vector2(278.5, 278.5)
+texture_normal = ExtResource("7_t6xxb")
+
+[node name="ButtonContainer4" type="Control" parent="ButtonsContainer"]
+layout_mode = 2
+
+[node name="PaletteButton" type="TextureButton" parent="ButtonsContainer/ButtonContainer4"]
+material = SubResource("ShaderMaterial_7mh3h")
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.3, 0.3)
+pivot_offset = Vector2(278.5, 278.5)
+texture_normal = ExtResource("7_t6xxb")
+
+[node name="ButtonContainer5" type="Control" parent="ButtonsContainer"]
+layout_mode = 2
+
+[node name="PaletteButton" type="TextureButton" parent="ButtonsContainer/ButtonContainer5"]
+material = SubResource("ShaderMaterial_v3uph")
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.3, 0.3)
+pivot_offset = Vector2(278.5, 278.5)
+texture_normal = ExtResource("7_t6xxb")
+
+[node name="ColorPicker" type="ColorPicker" parent="."]
+layout_mode = 1
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = -1195.0
+offset_top = -519.0
+offset_right = -896.999
+offset_bottom = -255.0
+grow_horizontal = 0
+grow_vertical = 2
+scale = Vector2(4, 4)
+edit_alpha = false
+picker_shape = 2
+can_add_swatches = false
+sampler_visible = false
+color_modes_visible = false
+sliders_visible = false
+hex_visible = false
+presets_visible = false
+
+[node name="GCM" type="Node" parent="."]
+script = ExtResource("13_256id")
+
+[node name="GCDM" type="Node" parent="."]
+script = ExtResource("14_60yao")
+
+[node name="FocusButtonsObserver" type="Node" parent="."]
+script = ExtResource("15_wrjcd")
+
+[node name="FocusPalettesObserver" type="Node" parent="."]
+script = ExtResource("16_hb18j")
+
+[node name="SpecificColorsManager" type="Node" parent="."]
+script = ExtResource("17_hb18j")

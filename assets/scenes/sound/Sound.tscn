@@ -1,0 +1,168 @@
+[gd_scene load_steps=23 format=3 uid="uid://bqoqjug2jf2n"]
+
+[ext_resource type="Script" uid="uid://hxqukgp6vkh4" path="res://assets/scenes/sound/scripts/sound_manager.gd" id="1_k2mti"]
+[ext_resource type="Script" uid="uid://8rwpq4gx2j1j" path="res://assets/scenes/sound/scripts/sound_player.gd" id="2_157ub"]
+[ext_resource type="Script" uid="uid://cgoy33sscyv4p" path="res://assets/scenes/sound/scripts/sound_pool.gd" id="2_advn5"]
+[ext_resource type="Script" uid="uid://bida0mrlnpord" path="res://assets/scenes/sound/scripts/sound_shifter.gd" id="2_u7nh0"]
+[ext_resource type="Script" uid="uid://dexxkdye1afbn" path="res://assets/scenes/sound/scripts/sound_stopper.gd" id="3_4asbn"]
+[ext_resource type="Script" uid="uid://8bg4jeuyqsbc" path="res://assets/scenes/sound/scripts/sound_loader.gd" id="3_vyixf"]
+[ext_resource type="Script" uid="uid://b66f86ovbn1jc" path="res://assets/scenes/sound/scripts/audio_stream_player.gd" id="5_4asbn"]
+[ext_resource type="Script" uid="uid://c7kvveuxmbfog" path="res://assets/scenes/sound/scripts/sustain_effect.gd" id="5_hxity"]
+[ext_resource type="Script" uid="uid://cly81gfy1iyim" path="res://assets/scenes/sound/scripts/streamGiver.gd" id="6_rrvmy"]
+[ext_resource type="Script" uid="uid://b32rfp5roqri" path="res://assets/scenes/sound/instrumentsScripts/pianoScripts/piano_shifter.gd" id="7_bex1j"]
+[ext_resource type="Script" uid="uid://dxa01iuo657y4" path="res://assets/scenes/sound/instrumentsScripts/pianoScripts/piano_giver.gd" id="7_kgio7"]
+[ext_resource type="Script" uid="uid://djbpkr4mn7oe8" path="res://assets/scenes/sound/instrumentsScripts/pianoScripts/piano_loader.gd" id="8_nrdlj"]
+[ext_resource type="Script" uid="uid://ckcxpkdb4vncu" path="res://assets/scenes/sound/instrumentsScripts/organScripts/organ_giver.gd" id="12_5yvgv"]
+[ext_resource type="Script" uid="uid://b00kain3tw6ar" path="res://assets/scenes/sound/instrumentsScripts/squareScripts/square_giver.gd" id="12_rwd63"]
+[ext_resource type="Script" uid="uid://b33f2xoc72evf" path="res://assets/scenes/sound/instrumentsScripts/organScripts/organ_shifter.gd" id="13_8uss8"]
+[ext_resource type="Script" uid="uid://de45pegie2tqq" path="res://assets/scenes/sound/instrumentsScripts/organScripts/organ_loader.gd" id="14_6e62x"]
+[ext_resource type="Script" uid="uid://cf2w8jh83umom" path="res://assets/scenes/sound/instrumentsScripts/squareScripts/square_loader.gd" id="14_kbouk"]
+[ext_resource type="Script" uid="uid://dxxctr5xchw8x" path="res://assets/scenes/sound/instrumentsScripts/generated_shifter.gd" id="17_6e62x"]
+[ext_resource type="Script" uid="uid://bogw5djnbf6ca" path="res://assets/scenes/sound/instrumentsScripts/triangleScripts/triangle_loader.gd" id="18_6e62x"]
+[ext_resource type="Script" uid="uid://dmk4chelgvs5m" path="res://assets/scenes/sound/instrumentsScripts/triangleScripts/triangle_giver.gd" id="18_18d48"]
+[ext_resource type="Script" uid="uid://ct7gb08c0jr6m" path="res://assets/scenes/sound/scripts/tremolo_effect.gd" id="21_6jaot"]
+[ext_resource type="Script" uid="uid://da5p7imnc11ko" path="res://assets/scenes/sound/scripts/echo_effect.gd" id="22_d8l06"]
+
+[node name="Sound" type="Node"]
+script = ExtResource("1_k2mti")
+
+[node name="SoundPlayer" type="Node" parent="."]
+script = ExtResource("2_157ub")
+
+[node name="SoundStopper" type="Node" parent="."]
+script = ExtResource("3_4asbn")
+
+[node name="SoundPool" type="Node" parent="."]
+script = ExtResource("2_advn5")
+
+[node name="AudioStreamPlayer0" type="AudioStreamPlayer" parent="SoundPool"]
+max_polyphony = 10
+script = ExtResource("5_4asbn")
+
+[node name="AudioStreamPlayer1" type="AudioStreamPlayer" parent="SoundPool"]
+script = ExtResource("5_4asbn")
+metadata/_custom_type_script = "uid://b66f86ovbn1jc"
+
+[node name="AudioStreamPlayer2" type="AudioStreamPlayer" parent="SoundPool"]
+script = ExtResource("5_4asbn")
+metadata/_custom_type_script = "uid://b66f86ovbn1jc"
+
+[node name="AudioStreamPlayer3" type="AudioStreamPlayer" parent="SoundPool"]
+script = ExtResource("5_4asbn")
+metadata/_custom_type_script = "uid://b66f86ovbn1jc"
+
+[node name="AudioStreamPlayer4" type="AudioStreamPlayer" parent="SoundPool"]
+script = ExtResource("5_4asbn")
+metadata/_custom_type_script = "uid://b66f86ovbn1jc"
+
+[node name="AudioStreamPlayer5" type="AudioStreamPlayer" parent="SoundPool"]
+script = ExtResource("5_4asbn")
+metadata/_custom_type_script = "uid://b66f86ovbn1jc"
+
+[node name="AudioStreamPlayer6" type="AudioStreamPlayer" parent="SoundPool"]
+script = ExtResource("5_4asbn")
+metadata/_custom_type_script = "uid://b66f86ovbn1jc"
+
+[node name="AudioStreamPlayer7" type="AudioStreamPlayer" parent="SoundPool"]
+script = ExtResource("5_4asbn")
+metadata/_custom_type_script = "uid://b66f86ovbn1jc"
+
+[node name="AudioStreamPlayer8" type="AudioStreamPlayer" parent="SoundPool"]
+script = ExtResource("5_4asbn")
+metadata/_custom_type_script = "uid://b66f86ovbn1jc"
+
+[node name="AudioStreamPlayer9" type="AudioStreamPlayer" parent="SoundPool"]
+script = ExtResource("5_4asbn")
+metadata/_custom_type_script = "uid://b66f86ovbn1jc"
+
+[node name="AudioStreamPlayer10" type="AudioStreamPlayer" parent="SoundPool"]
+script = ExtResource("5_4asbn")
+metadata/_custom_type_script = "uid://b66f86ovbn1jc"
+
+[node name="AudioStreamPlayer11" type="AudioStreamPlayer" parent="SoundPool"]
+script = ExtResource("5_4asbn")
+metadata/_custom_type_script = "uid://b66f86ovbn1jc"
+
+[node name="AudioStreamPlayer12" type="AudioStreamPlayer" parent="SoundPool"]
+script = ExtResource("5_4asbn")
+metadata/_custom_type_script = "uid://b66f86ovbn1jc"
+
+[node name="AudioStreamPlayer13" type="AudioStreamPlayer" parent="SoundPool"]
+script = ExtResource("5_4asbn")
+metadata/_custom_type_script = "uid://b66f86ovbn1jc"
+
+[node name="AudioStreamPlayer14" type="AudioStreamPlayer" parent="SoundPool"]
+script = ExtResource("5_4asbn")
+metadata/_custom_type_script = "uid://b66f86ovbn1jc"
+
+[node name="AudioStreamPlayer15" type="AudioStreamPlayer" parent="SoundPool"]
+script = ExtResource("5_4asbn")
+metadata/_custom_type_script = "uid://b66f86ovbn1jc"
+
+[node name="StreamGiver" type="Node" parent="."]
+script = ExtResource("6_rrvmy")
+
+[node name="SoundShifter" type="Node" parent="."]
+script = ExtResource("2_u7nh0")
+
+[node name="SoundLoader" type="Node" parent="."]
+script = ExtResource("3_vyixf")
+
+[node name="Instruments" type="Node" parent="."]
+
+[node name="PIANO" type="Node" parent="Instruments"]
+
+[node name="PIANOGiver" type="Node" parent="Instruments/PIANO"]
+script = ExtResource("7_kgio7")
+
+[node name="PIANOShifter" type="Node" parent="Instruments/PIANO"]
+script = ExtResource("7_bex1j")
+
+[node name="PIANOLoader" type="Node" parent="Instruments/PIANO"]
+script = ExtResource("8_nrdlj")
+
+[node name="ORGAN" type="Node" parent="Instruments"]
+
+[node name="ORGANGiver" type="Node" parent="Instruments/ORGAN"]
+script = ExtResource("12_5yvgv")
+
+[node name="ORGANShifter" type="Node" parent="Instruments/ORGAN"]
+script = ExtResource("13_8uss8")
+
+[node name="ORGANLoader" type="Node" parent="Instruments/ORGAN"]
+script = ExtResource("14_6e62x")
+
+[node name="SQUARE" type="Node" parent="Instruments"]
+
+[node name="SQUAREGiver" type="Node" parent="Instruments/SQUARE"]
+script = ExtResource("12_rwd63")
+
+[node name="SQUAREShifter" type="Node" parent="Instruments/SQUARE"]
+script = ExtResource("17_6e62x")
+metadata/_custom_type_script = "uid://dxxctr5xchw8x"
+
+[node name="SQUARELoader" type="Node" parent="Instruments/SQUARE"]
+script = ExtResource("14_kbouk")
+
+[node name="TRIANGLE" type="Node" parent="Instruments"]
+
+[node name="TRIANGLEGiver" type="Node" parent="Instruments/TRIANGLE"]
+script = ExtResource("18_18d48")
+
+[node name="TRIANGLEShifter" type="Node" parent="Instruments/TRIANGLE"]
+script = ExtResource("17_6e62x")
+metadata/_custom_type_script = "uid://dxxctr5xchw8x"
+
+[node name="TRIANGLELoader" type="Node" parent="Instruments/TRIANGLE"]
+script = ExtResource("18_6e62x")
+
+[node name="Effects" type="Node" parent="."]
+
+[node name="SustainEffect" type="Node" parent="Effects"]
+script = ExtResource("5_hxity")
+
+[node name="TremoloEffect" type="Node" parent="Effects"]
+script = ExtResource("21_6jaot")
+
+[node name="EchoEffect" type="Node" parent="Effects"]
+script = ExtResource("22_d8l06")
